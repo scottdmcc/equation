@@ -93,17 +93,17 @@ public class Mathematics {
         // While there are parenthesis in the equation...
         while (open_pos >= 0) {
             // Loop from the first open to the first close; making sure we are looking at the inner most group
-            for (int i = ++open_pos; i < close_pos; i++) {
+            for (int i = open_pos; i < close_pos; i++) {
                 if (equation.charAt(i) == OPEN_CHAR) {
                     open_pos = i;
                 }
             }
 
             // Solve inside the parenthesis
-            subtotal = reduce(equation.substring(open_pos, close_pos));
+            subtotal = reduce(equation.substring(open_pos + 1, close_pos));
 
             // Remove the parenthesis and the inner equation and substitute in the subtotal
-            equation = equation.replace(OPEN_CHAR + equation.substring(open_pos, close_pos) + CLOSE_CHAR, Integer.toString(subtotal));
+            equation = equation.replace(OPEN_CHAR + equation.substring(open_pos + 1, close_pos) + CLOSE_CHAR, Integer.toString(subtotal));
 
             // Look for new parenthesis
             open_pos = equation.indexOf(OPEN_CHAR);

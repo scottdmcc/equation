@@ -85,5 +85,9 @@ public class MathematicsTest
         equation = "(1 * 4) + (5 * 2)"; answer = 14;
         problem.parse(equation);
         Assert.assertEquals(equation + " = " + answer, answer, problem.getAnswer());
+
+        equation = "((10 * 10) * 10)"; answer = 1000;
+        problem.parse(equation);
+        Assert.assertEquals(equation + " = " + answer, answer, problem.getAnswer());
     }
 }
