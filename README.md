@@ -10,14 +10,12 @@ The java executable should be named `equation.jar`. It may have been renamed for
 
 The syntax is simple
 
-`java -jar equation.jar "{EQUATION}"`
+`java -jar ./equation.jar "{EQUATION}"`
 
 The equation has a few rules of syntax:
 
-* Only addition and multiplication are functional
-* Parenthesis can be added to affect order
-* Digits and operators must have a single space around them
-    * Exception: Parenthesis should not have a space on the side closest a digit
+* Only addition and multiplication are functional. Subtraction can be added with minimal changes.
+* Parenthesis can be added to affect order.
     
 Here are a few example equations:
 
@@ -26,6 +24,8 @@ Here are a few example equations:
 * "1 + 2 * 3"
 * "(1 * 4) + (5 * 2)"
 
-Division is not included as this app deals strictly with integers, and division may produce floating point answers. There is minimal validation so spacing may cause issues.
+The sanitation routine takes care of most spacing issues, so "1+1" works as an input but gets converted to "1 + 1".
 
-The output is the original equation, an equal sign, and then the answer.
+Division is not included as this app deals strictly with integers, and division may produce floating point answers. 
+
+The output is the formatted equation, an equal sign, and then the answer.
