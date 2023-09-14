@@ -4,9 +4,31 @@
 
 ---
 
+## Requirements
+
+Assignment:
+
+Write a program to parse and evaluate arithmetic expressions that supports addition and multiplication at a minimum.
+In addition, the solution submitted should contain a testing framework which will be used to validate that the solution is functioning as desired.
+
+The input into your solution will be text similar to the following example:
+
+1 + 1
+
+(3 + 4) * 6
+
+(1 * 4) + (5 * 2)
+
+Your solution should demonstrate the ability to parse/evaluate arithmetic expressions (do not use the "Shunting Yard" algorithm) as well as provide
+indications that the testing framework is validating your software solution.
+
+Please feel free to use whatever tools and languages you are most comfortable with when working through your solution however, the solution will need
+to be written in an Object Oriented fashion. Once completed, be prepared to show us your source code, insight into the design/architecture decisions
+made, results of the solution (i.e. output) and any other information relevant to the provided solution.
+
 ## Setup
 
-The java executable should be named `equation.jar`. It may have been renamed for easier emailing.
+The java executable should be named `equation.jar`.
 
 The syntax is simple
 
